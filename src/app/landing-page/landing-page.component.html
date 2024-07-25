@@ -1,0 +1,133 @@
+<link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet' />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="/">Expense Tracker</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#features">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#pricing">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section class="hero-section">
+    <div class="container">
+        <h1>Manage Your Expenses with Ease</h1>
+        <p>Track your spending, create budgets, and save money.</p>
+        <a href="/signUp" class="btn btn-hero">Get Started</a>
+    </div>
+</section>
+
+<section id="features" class="features">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <i class="fas fa-chart-line"></i>
+                <h3>Track Spending</h3>
+                <p>Keep an eye on your expenses and monitor your spending habits.</p>
+            </div>
+            <div class="col-md-4">
+                <i class="fas fa-wallet"></i>
+                <h3>Create Budgets</h3>
+                <p>Set up budgets to manage your finances better and save more money.</p>
+            </div>
+            <div class="col-md-4">
+                <i class="fas fa-lock"></i>
+                <h3>Secure and Private</h3>
+                <p>Your financial data is safe and secure with our top-notch security features.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="pricing" class="features">
+    <div class="container">
+        <h2 class="text-center">Pricing</h2>
+        <p class="text-center text-muted">Choose a plan that fits your needs.</p>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Free Plan</h5>
+                        <p class="card-text">$0/month</p>
+                        <p class="card-text">Basic expense tracking</p>
+                        <a href="/signUp" class="btn btn-primary">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Pro Plan</h5>
+                        <p class="card-text">$9.99/month</p>
+                        <p class="card-text">Advanced features and analytics</p>
+                        <a href="/signUp" class="btn btn-primary">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Enterprise Plan</h5>
+                        <p class="card-text">Custom pricing</p>
+                        <p class="card-text">All features and premium support</p>
+                        <a href="/signUp" class="btn btn-primary">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="contact" class="features">
+    <div class="containerr">
+        <h2 class="text-center">Contact Us</h2>
+        <p class="text-center text-muted">We'd love to hear from you!</p>
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <form #contactForm="ngForm" (ngSubmit)="alertmessage()">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name"
+                            required>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" rows="4" name="message"
+                            placeholder="Enter your message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block" [disabled]="contactForm.invalid">Send
+                        Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2024 Expense Tracker. All Rights Reserved.</p>
+        <p><a href="#">Privacy Policy</a>|<a href="#">Terms of Service</a></p>
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

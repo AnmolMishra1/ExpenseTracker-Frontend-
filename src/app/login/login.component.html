@@ -1,0 +1,33 @@
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+<div class="container">
+    <h1 class="mt-3 text-center">Login</h1>
+    <div *ngIf="message" class="alert alert-danger" role="alert">
+        {{ message }}
+    </div>
+    <form class="mt-4" #loginForm="ngForm" (ngSubmit)="Login()">
+        <div class="form-group">
+            <label for="username"><i class="fas fa-user"></i> Username:</label>
+            <input type="text" [(ngModel)]="login.username" class="form-control" id="username" name="username" required
+                #username="ngModel">
+            <div *ngIf="username.invalid && (username.dirty || username.touched)" class="text-danger">
+                Username is required.
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password"><i class="fas fa-lock"></i> Password:</label>
+            <input type="password" [(ngModel)]="login.password" class="form-control" id="password" name="password"
+                required #password="ngModel">
+            <div *ngIf="password.invalid && (password.dirty || password.touched)" class="text-danger">
+                Password is required.
+            </div>
+        </div>
+        <button type="submit" class="btn btn-custom btn-block" [disabled]="loginForm.invalid">Login</button>
+        <a href="/signUp" class="btn btn-custom btn-block">Signup</a>
+
+    </form>
+</div>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

@@ -1,0 +1,98 @@
+<link href='https://fonts.googleapis.com/css?family=Rubik:400,500,700' rel='stylesheet' />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+<div class="containerr" rowspan="5">
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="/">Expense Tracker</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#features">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#pricing">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div class="container mt-3">
+    <h2 class="text-center">Welcome,<span style="color:cornflowerblue"> {{username }}</span></h2>
+</div>
+<div class="container mt-3">
+    <h4 class="text-center">DASHBOARD</h4>
+    <form class="mb-4" (ngSubmit)="applyFilters()">
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <select class="form-control" [(ngModel)]="sortBy" name="sortBy">
+                    <option value="name">Sort by Name</option>
+                    <option value="createdAt">Sort by Created Date</option>
+                    <option value="modifyAt">Sort by Modified Date</option>
+                    <option value="category">Sort by Category</option>
+                    <option value="id">Sort by Id</option>
+                </select>
+            </div>
+            <div class="col-md-4 mb-3 ">
+                <select class="form-control" [(ngModel)]="filterBy" name="filterBy">
+                    <option value="">Filter by Category</option>
+                    <option value="Housing">Housing</option>
+                    <option value="Utilities">Utilities</option>
+                    <option value="Health">Health</option>
+                    <option value="Rent">Rent</option>
+                </select>
+            </div>
+            <div class="col-md-4 mb-3 d-flex align-items-center">
+                <button type="submit" class="fa fa-filter custom-button">Apply Filters</button>
+                <button type="button" class="fas fa-sign-out-alt custom-button" (click)="logout()">Logout</button>
+            </div>
+        </div>
+    </form>
+    <div class="card" id="printSection">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Category</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Created At</th>
+                            <th scope="col">Modified At</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let expense of filteredExpenses">
+                            <td>{{expense.name}}</td>
+                            <td>{{expense.category}}</td>
+                            <td>{{expense.price}}</td>
+                            <td>{{expense.createdAt}}</td>
+                            <td>{{expense.modifyAt}}</td>
+                            <td class="action-buttons">
+                                <a (click)="updateExpense(expense.id)" class="fas fa-edit btn-sm action-buttons"></a>
+                                <button type="button" class="fas fa-trash-alt btn-sm action-buttons"
+                                    (click)="deleteById(expense.id)"></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-3 ">
+        <button class="fa-plus btn-sm custom-button" (click)="addExpense()">Add Expense</button>
+        <button class=" fa-plus btn-sm custom-button" (click)="printExpenses()">Print Expense</button>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

@@ -1,0 +1,41 @@
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 400px;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.container h1 {
+    font-weight: 700;
+    color: #343a40;
+}
+
+.btn-custom {
+    background-color: cadetblue;
+    border-color: #28a745;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 50px;
+}
+
+.btn-custom:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+.form-group label {
+    font-weight: 600;
+}
+
+.alert {
+    font-size: 0.9em;
+    margin-top: 10px;
+}

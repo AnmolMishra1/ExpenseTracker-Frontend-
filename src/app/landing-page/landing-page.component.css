@@ -1,0 +1,109 @@
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: #435e79;
+    color: #343a40;
+}
+
+.navbar {
+    background-image: url('../bg.png');
+    font-family: 'Rubik', sans-serif;
+    border-radius: 15px;
+
+}
+
+.navbar-brand,
+.nav-link {
+    color: #033160;
+    font-family: 'Rubik', sans-serif;
+}
+
+.hero-section {
+    background: linear-gradient(rgba(23, 162, 184, 0.7), rgba(23, 162, 184, 0.7)), url('https://source.unsplash.com/1600x900/?finance,expense') no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 150px 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Rubik', sans-serif;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    font-family: 'Rubik', sans-serif;
+}
+
+.btn-hero {
+    background-color: #fff;
+    color: #17a2b8;
+    border-radius: 50px;
+    padding: 10px 30px;
+    margin-top: 20px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.features {
+    padding: 60px 0;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    background-color: #17a2b8;
+}
+
+.features .fa {
+    font-size: 3rem;
+    color: #17a2b8;
+    margin-bottom: 20px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.features h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.features p {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+.footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+}
+
+.footer a {
+    color: #17a2b8;
+    text-decoration: none;
+}
+
+.containerr {
+
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 50px;
+
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #17a2b8;
+    font-family: 'Rubik', sans-serif;
+
+}
+
+#contact {
+    background-color: #17a2b8;
+}
+
+.card {
+    background-color: #79d0e6;
+
+}
